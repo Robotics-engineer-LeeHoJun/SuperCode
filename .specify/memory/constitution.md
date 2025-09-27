@@ -1,50 +1,37 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# SuperCode Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Local-First Privacy
+SuperCode stores all user and project data locally, runs without telemetry, and isolates CLI processes to their minimum required permissions.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Spec-Driven Golden Path
+Every engagement follows the /constitution ? /specify ? /clarify ? /plan ? /tasks ? /implement sequence, and deliverables must be produced or updated before proceeding to the next phase.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Visibility & Rollback
+The application preserves checkpoints, timelines, and diffs for each workflow step to make current state transparent and allow instant restoration.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. CLI Respect & Parity
+Codex, Gemini, and Claude Code are orchestrated "as is" with their native login flows, context files, and MCP integrations. SuperCode never bypasses quotas, policies, or configuration conventions.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Beginner-Friendly Orchestration
+UI and automation must surface the single next action, explain rationale, and provide recovery paths so newcomers can complete the workflow confidently.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Operating Constraints
+- Web login flows remain delegated to each CLI; SuperCode only opens the corresponding browser windows.
+- Context files (AGENTS.md, GEMINI.md, CLAUDE.md) stay authoritative, and SuperCode keeps them synchronized with role prompts.
+- Security sandboxing is mandatory: limit file and network scopes per CLI session and record any escalation requests in logs.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow
+1. Run spec-kit initialization or verification before capturing requirements.
+2. Update memory artifacts and checklists as part of each golden-path command.
+3. Use the orchestrator to assign tasks to role-specific agents and collect their outputs for review against acceptance criteria.
+4. Capture checkpoints before and after automated actions, including PTY-launched CLI sessions.
+5. Review outcomes against functional requirements and rerun or redirect tasks when acceptance gates fail.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+- The constitution supersedes ad-hoc practices; exceptions require documented approval and an amendment roadmap.
+- Pull requests and reviews must verify compliance with the golden path, checklist status, and checkpoint integrity.
+- Reference SuperCode role prompts and spec-kit artifacts in all Orchestrator-driven sessions to maintain shared context.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-09-28 | **Last Amended**: 2025-09-28
